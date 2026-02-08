@@ -532,3 +532,60 @@ textarea:focus {
     }
 
 }
+
+.brand-logo {
+  height: 34px;
+  width: auto;
+  display: block;
+}
+
+.footer-logo {
+  height: 28px;
+  width: auto;
+  display: block;
+  opacity: 0.9;
+}
+
+.presence {
+  margin-top: 26px;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: 0.65;
+}
+
+.grid.products {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.card {
+  padding: 18px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card-title {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+.card-body {
+  opacity: 0.82;
+  line-height: 1.55;
+}
+
+@media (max-width: 860px) {
+  .grid.products {
+    grid-template-columns: 1fr;
+  }
+}
