@@ -70,11 +70,10 @@ body {
     color: var(--text);
 }
 
-.brand-logo {
-    width: 34px;
-    height: 34px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(139, 92, 246, .22);
+.logo {
+  height: 34px;
+  width: auto;
+  display: block;
 }
 
 .brand-name {
@@ -484,9 +483,10 @@ textarea:focus {
 }
 
 .footer-logo {
-    width: 28px;
-    height: 28px;
-    border-radius: 10px;
+  height: 28px;
+  width: auto;
+  display: block;
+  opacity: 0.9;
 }
 
 .footer-name {
@@ -530,4 +530,5 @@ textarea:focus {
     .mobile-menu.show {
         display: block;
     }
+
 }
