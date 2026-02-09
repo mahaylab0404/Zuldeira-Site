@@ -17,14 +17,20 @@ const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 
 if (menuBtn && mobileMenu) {
-  // Initialize a11y state
-  mobileMenu.setAttribute("aria-hidden", "true");
-
   menuBtn.addEventListener("click", () => {
     const isOpen = mobileMenu.classList.toggle("show");
     mobileMenu.setAttribute("aria-hidden", String(!isOpen));
     menuBtn.setAttribute("aria-expanded", String(isOpen));
   });
+
+  mobileMenu.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", () => {
+      mobileMenu.classList.remove("show");
+      mobileMenu.setAttribute("aria-hidden", "true");
+      menuBtn.setAttribute("aria-expanded", "false");
+    });
+  });
+}
 
   mobileMenu.querySelectorAll("a").forEach((a) => {
     a.addEventListener("click", () => {
@@ -72,3 +78,4 @@ Message:
     }
   });
 }
+
