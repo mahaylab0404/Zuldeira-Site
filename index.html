@@ -3,36 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <meta property="og:title" content="Zuldeira Technologies" />
     <meta property="og:description" content="Minimal systems. Maximum leverage." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://zuldeira.com" />
     <meta property="og:image" content="https://zuldeira.com/assets/Zuldeira.png" />
+
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Zuldeira Technologies" />
     <meta name="twitter:description" content="Minimal systems. Maximum leverage." />
     <meta name="twitter:image" content="https://zuldeira.com/assets/Zuldeira.png" />
+
     <title>Zuldeira Technologies</title>
     <meta
       name="description"
       content="Zuldeira Technologies builds minimal, powerful software systems for the future."
     />
 
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/Zuldeira.png" />
-
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
     <div class="bg"></div>
 
-    <header class="site-header">
-  <div class="header-inner">
-    <img src="assets/Zuldeira.png" alt="Zuldeira logo" class="logo" />
-    <span class="brand-text">ZULDEIRA TECHNOLOGIES</span>
-  </div>
-    </header>
+    <header class="header">
+      <div class="container nav">
+        <a class="brand" href="#top" aria-label="Zuldeira Technologies home">
+          <img src="assets/Zuldeira.png" alt="Zuldeira logo" class="brand-logo" />
+          <span class="brand-text">ZULDEIRA TECHNOLOGIES</span>
+        </a>
 
         <nav class="links" aria-label="Primary">
           <a href="#products">Products</a>
@@ -41,20 +42,26 @@
           <button class="btn ghost" id="themeBtn" type="button">Glow</button>
         </nav>
 
-        <button class="hamburger" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
-  <span></span><span></span><span></span>
-</button>
+        <button
+          class="hamburger"
+          id="menuBtn"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span></span><span></span><span></span>
         </button>
       </div>
 
-      <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
         <a href="#products">Products</a>
         <a href="#principles">Principles</a>
         <a href="#contact">Contact</a>
       </div>
     </header>
 
-    <main>
+    <main id="top">
       <section class="hero">
         <div class="container hero-grid">
           <div class="hero-left">
@@ -138,23 +145,22 @@
       </section>
     </main>
 
-    <div class="footer-left">
-      <img src="assets/Zuldeira.png" alt="Zuldeira logo" class="footer-logo" />
-    <div>
-      <div class="footer-brand">ZULDEIRA TECHNOLOGIES</div>
-      <div class="tiny muted">Built for the long horizon.</div>
-    </div>
-   </div>
-    
+    <footer class="footer">
+      <div class="container footer-row">
+        <div class="footer-left">
+          <img src="assets/Zuldeira.png" alt="Zuldeira logo" class="footer-logo" />
+          <div>
+            <div class="footer-brand">ZULDEIRA TECHNOLOGIES</div>
+            <div class="tiny muted">Built for the long horizon.</div>
+          </div>
+        </div>
+
         <div class="tiny muted">
           © <span id="year"></span> Zuldeira Technologies LLC
         </div>
       </div>
-   </footer>
+    </footer>
 
     <script src="script.js"></script>
   </body>
 </html>
-
-
-
