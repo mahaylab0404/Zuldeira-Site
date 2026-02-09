@@ -17,14 +17,9 @@
   --radius-lg: 22px;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html,
-body {
-  height: 100%;
-}
+html, body { height: 100%; }
 
 body {
   margin: 0;
@@ -64,13 +59,18 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
-.header-inner {
+.nav {
   display: flex;
   align-items: center;
-  gap: 14px;
+  justify-content: space-between;
+  padding: 14px 0;
+  gap: 18px;
 }
 
-.nav {
+/* In case your HTML uses header-inner instead of nav+container */
+.header-inner {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -92,8 +92,11 @@ body {
   display: block;
 }
 
+/* Apply “logo-style” text to BOTH old and new class names */
 .brand-text,
-.footer-brand {
+.brand-name,
+.footer-brand,
+.footer-name {
   font-weight: 800;
   letter-spacing: 0.32em;
   text-transform: uppercase;
@@ -101,28 +104,25 @@ body {
   line-height: 1;
   white-space: nowrap;
 
-  background: linear-gradient(
-    90deg,
-    #c4b5fd,
-    #a78bfa,
-    #60a5fa
-  );
-  
+  background: linear-gradient(90deg, #e9e7ff, #c4b5fd, #a78bfa, #60a5fa);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 
+  /* Adds that crisp, “metallic” pop */
+  -webkit-text-stroke: 0.35px rgba(255, 255, 255, 0.14);
   text-shadow:
     0 0 10px rgba(139, 92, 246, 0.35),
     0 0 22px rgba(59, 130, 246, 0.25);
 }
 
-/* Footer slightly smaller */
-.footer-brand {
+/* Footer slightly smaller (only where footer-brand or footer-name is used) */
+.footer-brand,
+.footer-name {
   font-size: 12px;
   letter-spacing: 0.28em;
-  text-shadow:
-    0 0 8px rgba(139, 92, 246, 0.25);
+  -webkit-text-stroke: 0.3px rgba(255, 255, 255, 0.12);
+  text-shadow: 0 0 8px rgba(139, 92, 246, 0.25);
 }
 
 .links {
@@ -170,13 +170,9 @@ body {
   box-shadow: 0 24px 80px rgba(139, 92, 246, 0.16);
 }
 
-.btn.primary:hover {
-  filter: brightness(1.05);
-}
+.btn.primary:hover { filter: brightness(1.05); }
 
-.btn.ghost {
-  padding: 10px 12px;
-}
+.btn.ghost { padding: 10px 12px; }
 
 /* Mobile menu */
 .hamburger {
@@ -209,18 +205,12 @@ body {
   text-decoration: none;
 }
 
-.mobile-menu a:hover {
-  color: var(--text);
-}
+.mobile-menu a:hover { color: var(--text); }
 
-.mobile-menu.show {
-  display: block;
-}
+.mobile-menu.show { display: block; }
 
 /* Hero */
-.hero {
-  padding: 92px 0 42px;
-}
+.hero { padding: 92px 0 42px; }
 
 .hero-grid {
   display: grid;
@@ -301,9 +291,7 @@ h1 {
 }
 
 /* Sections */
-.section {
-  padding: 46px 0;
-}
+.section { padding: 46px 0; }
 
 h2 {
   margin: 0;
@@ -311,13 +299,8 @@ h2 {
   letter-spacing: -0.01em;
 }
 
-.muted {
-  color: var(--muted);
-}
-
-.tiny {
-  font-size: 12px;
-}
+.muted { color: var(--muted); }
+.tiny { font-size: 12px; }
 
 /* Products grid */
 .grid.products {
@@ -371,9 +354,7 @@ h2 {
   text-decoration: none;
 }
 
-.contact-links a:hover {
-  text-decoration: underline;
-}
+.contact-links a:hover { text-decoration: underline; }
 
 /* Footer */
 .footer {
@@ -399,12 +380,10 @@ h2 {
   height: 26px;
   width: auto;
   opacity: 0.9;
+  display: block;
 }
 
-.footer-name {
-  font-weight: 700;
-  letter-spacing: 0.06em;
-}
+.footer-name { font-weight: 700; letter-spacing: 0.06em; }
 
 /* Glow mode (triggered by button) */
 .glow .bg {
@@ -422,17 +401,10 @@ h2 {
 
 /* Responsive */
 @media (max-width: 900px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-  }
+  .hero-grid { grid-template-columns: 1fr; }
 
-  .links {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
-  }
+  .links { display: none; }
+  .hamburger { display: block; }
 
   .orb {
     position: relative;
@@ -442,18 +414,10 @@ h2 {
     height: 280px;
   }
 
-  .hero-right {
-    min-height: auto;
-  }
+  .hero-right { min-height: auto; }
 }
 
 @media (max-width: 860px) {
-  .grid.products {
-    grid-template-columns: 1fr;
-  }
-
-  .grid.principles {
-    grid-template-columns: 1fr;
-  }
+  .grid.products { grid-template-columns: 1fr; }
+  .grid.principles { grid-template-columns: 1fr; }
 }
-
